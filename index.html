@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dell'arte | Bea Duarte</title>
+
+    <link rel="icon" type="image/png" href="lua vermelha.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Player de música -->
+    <div class="player-musica">
+
+        <img src="darte.jpg" alt="Capa da música" class="capa-disco">
+
+        <div class="info-musica">
+            <h3>Dell'arte</h3>
+            <p>Bea Duarte</p>
+
+            <audio controls id="musica">
+                <source src="01. Dell'arte - Bea Duarte.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <h1>Dell'arte</h1>
+
+        <h2>Bea Duarte</h2>
+
+        <p>Sou da arte, vivo por ela.</p>
+
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Letra da música -->
+        <section class="letra">
+
+            <h2>Letra</h2>
+
+            <p>
+                Caro mio <br>
+                Non mi scuso <br>
+                Sono dell'arte <br>
+                Vivo per lei <br>
+            </p>
+
+            <p>
+                Visto minha farsa <br>
+                Te apresento a minha graça <br>
+                Percorro nomes, vilanias e desgraças <br>
+                Quanto azar seu me conhecer <br>
+                Eu sempre faço pagar <br>
+                Aqui nada é de graça <br>
+            </p>
+
+            <p>
+                Senhoras e com dores <br>
+                Apresento-lhes o meu pior de tudo <br>
+                Eu quero pegar fogo <br>
+            </p>
+
+            <p>
+                Senhoras e senhores <br>
+                Ninguém vai sorrir sozinho <br>
+                Eu vou com tudo <br>
+                Eu quero pegar fogo <br>
+            </p>
+
+            <p>
+                Caro mio <br>
+                Non mi scuso <br>
+                Sono dell’arte <br>
+                Vivo per <br>
+            </p>
+
+            <p>
+                Caro mio <br>
+                Non mi scuso <br>
+                Sono dell’arte <br>
+                Vivo per lei <br>
+            </p>
+
+        </section>
+
+
+        <!-- Imagem ilustrativa -->
+        <section class="ilustracao">
+
+            <h2>Imagem ilustrativa</h2>
+
+            <img src="dell.jpg"
+                 alt="Imagem ilustrativa da música Dellarte">
+
+        </section>
+
+        <section class="video">
+        
+            <video autoplay muted loop controls>
+                <source src="dellarte vídeo.mp4" type="video/mp4">
+            </video>
+        
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <a href="https://joaosaul-star.github.io/dellarte/" class="link-musica">
+          Veja também a versão Extended🩸🔥
+          (clique aqui!) <br>
+        </a>
+
+    </footer>
+
+</body>
+
+<script>
+
+    const musica = document.getElementById("musica");
+    const capa = document.querySelector(".capa-disco");
+
+    // Quando a música começar
+    musica.addEventListener("play", function() {
+        capa.classList.add("tocando");
+    });
+
+    // Quando a música for pausada
+    musica.addEventListener("pause", function() {
+        capa.classList.remove("tocando");
+    });
+
+    // Quando a música terminar
+    musica.addEventListener("ended", function() {
+        capa.classList.remove("tocando");
+    });
+
+</script>
+
+</html>
